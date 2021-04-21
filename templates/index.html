@@ -6,6 +6,25 @@
   <body>
     <div align="center">
       <h1>Welcome!</h1>
+      {% if username %}
+        <div>
+          <p>
+            Hello, {{ username }}.
+          <p>
+          <div>
+            <a class="button" href="/">Logout</a>
+          </div>
+        </div>
+      {% else %}
+        <div>
+          <p>
+            You're not looged in.
+          </p>
+          <div>
+            <a class="button" href="/auth">Login with GitHub</a>
+          </div>
+        </div>
+      {% endif %}
     </div>
   </body>
 </html>
